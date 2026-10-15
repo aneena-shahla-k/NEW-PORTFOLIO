@@ -15,16 +15,16 @@ import {
 } from "lucide-react";
 import "./Projects.css";
 
-import img1 from "../images/luxeliving.png";
-import img2 from "../images/honey.png";
-import img3 from "../images/kitchen.png";
-import img4 from "../images/nexora.png";
-import img5 from "../images/wellness.png";
-import img6 from "../images/aiconcept.png";
-import img7 from "../images/solar.png";
-import img8 from "../images/clay.png";
-import img9 from "../images/ayshas.png";
-import img10 from "../images/lumiere.png";
+import img1 from "../images/global/luxeliving.webp";
+import img2 from "../images/global/honey.webp";
+import img3 from "../images/global/kitchen.webp";
+import img4 from "../images/global/nexora.webp";
+import img5 from "../images/global/wellness.webp";
+import img6 from "../images/global/aiconcept.webp";
+import img7 from "../images/global/solar.webp";
+import img8 from "../images/global/clay.webp";
+import img9 from "../images/global/ayshas.webp";
+import img10 from "../images/global/lumiere.webp";
 
 const projects = [
   {

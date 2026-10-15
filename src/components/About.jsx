@@ -13,7 +13,7 @@ import {
 } from "lucide-react";
 
 import "./About.css";
-import img from "../images/about.png";
+import img from "../images/global/about.webp";
 
 const About = () => {
   const features = [

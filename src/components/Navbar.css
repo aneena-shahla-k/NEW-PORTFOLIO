@@ -195,17 +195,13 @@
 
 .navbar__menu {
   display: none;
-
   width: 40px;
   height: 40px;
-
   align-items: center;
   justify-content: center;
-
   border: 1px solid rgba(255, 255, 255, 0.9);
   border-radius: 12px;
-
-  background: rgba(255, 255, 255, 0.65);
+  background: rgba(192, 182, 182, 0.65);
 
   color: #27525a;
 
@@ -488,5 +484,101 @@
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
+  }
+}
+/* ==========================================
+   MOBILE NAVBAR — STRONG LIQUID GLASS
+========================================== */
+
+@media (max-width: 850px) {
+  .navbar__mobile {
+    background: linear-gradient(
+      145deg,
+      rgba(248, 255, 255, 0.98) 0%,
+      rgba(231, 248, 248, 0.97) 55%,
+      rgba(218, 241, 243, 0.96) 100%
+    );
+
+    -webkit-backdrop-filter: blur(32px) saturate(160%);
+    backdrop-filter: blur(32px) saturate(160%);
+
+    border: 1px solid rgba(255, 255, 255, 0.98);
+
+    box-shadow:
+      0 24px 55px rgba(31, 91, 100, 0.20),
+      0 8px 22px rgba(31, 91, 100, 0.10),
+      inset 0 1px 0 rgba(255, 255, 255, 1),
+      inset 0 -1px 0 rgba(80, 145, 153, 0.12);
+  }
+
+  /* Menu items: clearer contrast */
+  .navbar__mobile-link {
+    background: rgba(255, 255, 255, 0.78);
+    color: #315f68;
+
+    border: 1px solid rgba(255, 255, 255, 0.9);
+
+    box-shadow:
+      0 2px 8px rgba(47, 111, 119, 0.04);
+
+    transition:
+      background 0.25s ease,
+      box-shadow 0.25s ease,
+      transform 0.25s ease;
+  }
+
+  .navbar__mobile-link:hover {
+    background: #ffffff;
+  }
+
+  /* Active section */
+  .navbar__mobile-link--active {
+    background: linear-gradient(
+      135deg,
+      rgba(205, 236, 235, 0.98),
+      rgba(224, 245, 244, 0.98)
+    );
+
+    color: #194f58;
+
+    border-color: rgba(83, 151, 158, 0.24);
+
+    box-shadow:
+      inset 0 0 0 1px rgba(67, 140, 147, 0.10),
+      0 3px 10px rgba(47, 111, 119, 0.06);
+  }
+
+  /* Close/menu toggle button */
+  .navbar__menu {
+    background: linear-gradient(
+      145deg,
+      #ffffff,
+      #e4f4f4
+    );
+
+    border: 1px solid rgba(255, 255, 255, 0.98);
+
+    box-shadow:
+      0 4px 14px rgba(47, 111, 119, 0.13),
+      inset 0 1px 0 #ffffff;
+  }
+
+  /* Let's Talk button stays prominent */
+  .navbar__mobile-contact {
+    box-shadow:
+      0 7px 18px rgba(45, 112, 121, 0.25),
+      inset 0 1px 0 rgba(255, 255, 255, 0.20);
+  }
+}
+
+/* Fallback for browsers without backdrop-filter */
+@supports not (
+  (backdrop-filter: blur(1px)) or
+  (-webkit-backdrop-filter: blur(1px))
+) {
+  @media (max-width: 850px) {
+    .navbar__mobile {
+      background: #eaf8f8;
+    }
   }
 }

@@ -8,7 +8,7 @@ import {
   MessageCircle,
 } from "lucide-react";
 import "./Contact.css";
-import contactBg from "../images/cnt.png";
+import contactBg from "../images/global/cnt.webp";
 
 const initialFormData = {
   name: "",
