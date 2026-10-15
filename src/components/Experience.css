@@ -1,0 +1,673 @@
+
+/* =========================================================
+   EXPERIENCE SECTION — OCEAN GLASS
+========================================================= */
+
+.experience-section {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  min-height: 100vh;
+  padding: 130px 6% 110px;
+  box-sizing: border-box;
+
+  background:
+    radial-gradient(
+      circle at 12% 20%,
+      rgba(255, 255, 255, 0.95) 0%,
+      rgba(255, 255, 255, 0.48) 13%,
+      transparent 34%
+    ),
+    radial-gradient(
+      circle at 88% 75%,
+      rgba(142, 211, 220, 0.32),
+      transparent 38%
+    ),
+    linear-gradient(
+      135deg,
+      #eefafa 0%,
+      #e3f6f7 28%,
+      #d9f1f3 58%,
+      #d3edf1 76%,
+      #eaf8f7 100%
+    );
+
+  color: #173f49;
+  overflow: hidden;
+}
+
+.experience-section *,
+.experience-section *::before,
+.experience-section *::after {
+  box-sizing: border-box;
+}
+
+.experience-section::before {
+  content: "";
+  position: absolute;
+  width: 720px;
+  height: 720px;
+  left: -260px;
+  top: 10%;
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(112, 198, 210, 0.28) 0%,
+    transparent 70%
+  );
+
+  filter: blur(25px);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.experience-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+/* =========================================================
+   SECTION HEADER
+========================================================= */
+
+.experience-header {
+  max-width: 780px;
+  margin-bottom: 50px;
+}
+
+.experience-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+
+  color: #60858c;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+}
+
+.experience-label-dot {
+  width: 6px;
+  height: 6px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #4f8992;
+
+  box-shadow:
+    0 0 0 5px rgba(79, 137, 146, 0.08),
+    0 0 18px rgba(79, 137, 146, 0.3);
+}
+
+.experience-title {
+  margin: 0;
+  color: #153f49;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(38px, 4.4vw, 64px);
+  font-weight: 500;
+  line-height: 1.02;
+  letter-spacing: -0.045em;
+
+  text-shadow: 0 2px 20px rgba(51, 108, 116, 0.08);
+}
+
+.experience-subtitle {
+  max-width: 680px;
+  margin: 20px 0 0;
+
+  color: #58777e;
+  font-size: 14px;
+  line-height: 1.75;
+  letter-spacing: -0.01em;
+}
+
+/* =========================================================
+   CARD STACK — NO STICKY OVERLAP
+========================================================= */
+
+.experience-timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 30px;
+
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================================================
+   GLASS CARD
+========================================================= */
+
+.experience-card {
+  position: relative;
+  isolation: isolate;
+
+  display: block;
+  flex: 0 0 auto;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  top: auto;
+
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  border-radius: 26px;
+  overflow: hidden;
+
+  background: rgba(238, 250, 250, 0.55);
+
+  box-shadow:
+    0 22px 50px rgba(47, 111, 119, 0.09),
+    inset 0 1px 0 rgba(255, 255, 255, 1);
+
+  /* No movement that can cause card stacking */
+  transform: none;
+  scroll-margin-top: 30px;
+
+  transition:
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.experience-card:hover {
+  transform: none;
+
+  border-color: rgba(79, 137, 146, 0.45);
+
+  box-shadow:
+    0 28px 58px rgba(47, 111, 119, 0.13),
+    inset 0 1px 0 rgba(255, 255, 255, 1);
+}
+
+/* =========================================================
+   CARD BACKGROUND LAYERS
+========================================================= */
+
+.exp-card-bg-image {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+
+  width: 100%;
+  height: 100%;
+
+  background:
+    radial-gradient(
+      circle at 95% 5%,
+      rgba(255, 255, 255, 0.65),
+      transparent 42%
+    );
+
+  pointer-events: none;
+}
+
+.exp-card-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  width: 100%;
+  height: 100%;
+
+  background: linear-gradient(
+    135deg,
+    rgba(238, 250, 250, 0.78) 0%,
+    rgba(227, 246, 247, 0.68) 50%,
+    rgba(211, 237, 241, 0.8) 100%
+  );
+
+  backdrop-filter: blur(8px) saturate(120%);
+  -webkit-backdrop-filter: blur(8px) saturate(120%);
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   CARD INNER CONTENT
+========================================================= */
+
+.exp-card-inner-content {
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+  min-width: 0;
+  padding: 28px 30px;
+}
+
+/* =========================================================
+   CARD HEADER
+========================================================= */
+
+.exp-inner-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 18px;
+
+  padding: 8px 0 20px;
+  border-bottom: 1px solid rgba(79, 137, 146, 0.13);
+}
+
+.exp-role-group {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+}
+
+.exp-icon-bubble {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+
+  background: linear-gradient(145deg, #5d9da6, #397983);
+  color: #ffffff;
+
+  box-shadow:
+    0 8px 18px rgba(45, 112, 121, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.exp-role-details {
+  min-width: 0;
+}
+
+.exp-role {
+  margin: 0;
+  color: #173f49;
+
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+
+  overflow-wrap: anywhere;
+}
+
+.exp-company-sub {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  margin-top: 5px;
+
+  color: #43717a;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.exp-company-sub svg {
+  flex-shrink: 0;
+}
+
+/* =========================================================
+   DATE AND LOCATION PILLS
+========================================================= */
+
+.exp-pill-group {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-width: 0;
+}
+
+.exp-glass-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  max-width: 100%;
+  padding: 7px 12px;
+
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.82);
+  color: #2b565f;
+
+  font-size: 11px;
+  font-weight: 650;
+  line-height: 1.5;
+
+  box-shadow: 0 4px 10px rgba(47, 111, 119, 0.05);
+}
+
+.exp-glass-pill svg {
+  flex-shrink: 0;
+}
+
+/* =========================================================
+   RESPONSIBILITIES
+========================================================= */
+
+.exp-content-box {
+  position: relative;
+
+  margin-top: 20px;
+  padding: 20px 22px;
+
+  border: 1px solid rgba(255, 255, 255, 0.48);
+  border-radius: 17px;
+
+  background: rgba(255, 255, 255, 0.24);
+
+  box-shadow: 0 4px 20px rgba(47, 111, 119, 0.04);
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.exp-content-box-title {
+  margin: 0 0 15px;
+
+  color: #386068;
+  font-size: 11px;
+  font-weight: 750;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.exp-bullet-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.exp-bullet-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+
+  min-width: 0;
+
+  color: #395c63;
+  font-size: 13px;
+  line-height: 1.75;
+
+  overflow-wrap: anywhere;
+}
+
+.exp-check-icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+
+  border-radius: 50%;
+  background: rgba(79, 137, 146, 0.14);
+  color: #35757f;
+}
+
+/* =========================================================
+   TECHNOLOGIES AND TOOLS
+========================================================= */
+
+.exp-tech-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+
+  margin-top: 20px;
+  padding-top: 18px;
+
+  border-top: 1px solid rgba(79, 137, 146, 0.15);
+}
+
+.exp-tech-label {
+  color: #4b7178;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.exp-tech-chips {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  width: 100%;
+  min-width: 0;
+}
+
+.exp-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  max-width: 100%;
+  padding: 6px 12px;
+
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.78);
+  color: #27525b;
+
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.5;
+
+  overflow-wrap: anywhere;
+
+  box-shadow: 0 3px 8px rgba(47, 111, 119, 0.04);
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.exp-chip:hover {
+  background: #ffffff;
+  border-color: rgba(79, 137, 146, 0.3);
+  color: #1d4650;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 850px) {
+  .experience-section {
+    padding: 100px 5% 85px;
+  }
+
+  .experience-timeline {
+    gap: 24px;
+  }
+
+  .exp-card-inner-content {
+    padding: 24px 22px;
+  }
+
+  .exp-inner-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .exp-pill-group {
+    justify-content: flex-start;
+  }
+
+  .exp-content-box {
+    padding: 18px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 550px) {
+  .experience-section {
+    min-height: auto;
+    padding: 78px 18px 68px;
+  }
+
+  .experience-header {
+    margin-bottom: 32px;
+  }
+
+  .experience-label {
+    margin-bottom: 15px;
+    font-size: 8px;
+    letter-spacing: 0.18em;
+  }
+
+  .experience-title {
+    font-size: clamp(35px, 9vw, 46px);
+    line-height: 1.08;
+  }
+
+  .experience-subtitle {
+    margin-top: 15px;
+    font-size: 12.5px;
+    line-height: 1.8;
+  }
+
+  .experience-timeline {
+    gap: 20px;
+  }
+
+  .experience-card {
+    border-radius: 20px;
+  }
+
+  .exp-card-inner-content {
+    padding: 20px 16px;
+  }
+
+  .exp-inner-header {
+    gap: 15px;
+    padding-top: 4px;
+    padding-bottom: 18px;
+  }
+
+  .exp-role-group {
+    align-items: flex-start;
+    gap: 11px;
+  }
+
+  .exp-icon-bubble {
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+  }
+
+  .exp-icon-bubble svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .exp-role {
+    font-size: 16px;
+    line-height: 1.45;
+  }
+
+  .exp-company-sub {
+    font-size: 11.5px;
+  }
+
+  .exp-pill-group {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
+    width: 100%;
+  }
+
+  .exp-glass-pill {
+    justify-content: flex-start;
+    padding: 6px 10px;
+    border-radius: 12px;
+    font-size: 10px;
+  }
+
+  .exp-content-box {
+    margin-top: 16px;
+    padding: 16px 13px;
+    border-radius: 14px;
+  }
+
+  .exp-content-box-title {
+    font-size: 10px;
+    line-height: 1.6;
+  }
+
+  .exp-bullet-list {
+    gap: 11px;
+  }
+
+  .exp-bullet-item {
+    gap: 8px;
+    font-size: 12px;
+    line-height: 1.7;
+  }
+
+  .exp-check-icon-wrap {
+    width: 18px;
+    height: 18px;
+  }
+
+  .exp-check-icon-wrap svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .exp-tech-section {
+    gap: 10px;
+    margin-top: 17px;
+    padding-top: 15px;
+  }
+
+  .exp-tech-label {
+    font-size: 10px;
+  }
+
+  .exp-tech-chips {
+    gap: 7px;
+  }
+
+  .exp-chip {
+    padding: 5px 9px;
+    font-size: 10px;
+  }
+}
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .experience-card,
+  .exp-chip {
+    transition: none;
+  }
+}
