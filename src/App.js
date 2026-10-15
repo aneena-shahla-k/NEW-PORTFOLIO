@@ -33,15 +33,7 @@ function App() {
         <section id="experience"><Experience /></section>
         <section id="projects"> <Projects /> </section>
         <section id="contact"><Contact /></section>
-
-      
-        {/* 08 — Contact */}
-        {/* <section id="contact">
-          <Contact />
-        </section> */}
-
       </main>
-
       {/* <Footer /> */}
 
     </div>
