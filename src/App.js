@@ -2,6 +2,7 @@ import React from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import { Analytics } from "@vercel/analytics/react"
 
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
@@ -25,6 +26,7 @@ function App() {
 }, []);
   return (
     <div className="app">
+      <Analytics/>
       <Navbar />
       <main>
         <section id="home"><Hero /></section>
